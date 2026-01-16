@@ -70,7 +70,7 @@ CMakeFiles/opengl.dir/src/glad.c.o: /home/disruter/code/opengl/src/glad.c \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
-CMakeFiles/opengl.dir/src/main.cpp.o: /home/disruter/code/opengl/src/main.cpp \
+CMakeFiles/opengl.dir/src/two.cpp.o: /home/disruter/code/opengl/src/two.cpp \
   /home/disruter/code/opengl/include/KHR/khrplatform.h \
   /home/disruter/code/opengl/include/glad/glad.h \
   /usr/include/GLFW/glfw3.h \
@@ -288,7 +288,7 @@ opengl: /lib/x86_64-linux-gnu/libX11.so.6 \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
   CMakeFiles/opengl.dir/src/glad.c.o \
-  CMakeFiles/opengl.dir/src/main.cpp.o
+  CMakeFiles/opengl.dir/src/two.cpp.o
 
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
@@ -312,8 +312,6 @@ opengl: /lib/x86_64-linux-gnu/libX11.so.6 \
 /lib/x86_64-linux-gnu/libm.so.6:
 
 /lib/x86_64-linux-gnu/libbsd.so.0:
-
-CMakeFiles/opengl.dir/src/main.cpp.o:
 
 /lib/x86_64-linux-gnu/libXdmcp.so.6:
 
@@ -575,8 +573,6 @@ CMakeFiles/opengl.dir/src/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/home/disruter/code/opengl/src/main.cpp:
-
 /usr/include/endian.h:
 
 /usr/include/c++/13/bits/streambuf.tcc:
@@ -618,6 +614,12 @@ CMakeFiles/opengl.dir/src/main.cpp.o:
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/home/disruter/code/opengl/src/two.cpp:
+
+/usr/lib/x86_64-linux-gnu/Scrt1.o:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
@@ -685,6 +687,8 @@ CMakeFiles/opengl.dir/src/main.cpp.o:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
+CMakeFiles/opengl.dir/src/two.cpp.o:
+
 /usr/include/time.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
@@ -732,7 +736,3 @@ CMakeFiles/opengl.dir/src/glad.c.o:
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
-/usr/lib/x86_64-linux-gnu/Scrt1.o:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:

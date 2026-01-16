@@ -72,19 +72,19 @@ include CMakeFiles/opengl.dir/flags.make
 CMakeFiles/opengl.dir/codegen:
 .PHONY : CMakeFiles/opengl.dir/codegen
 
-CMakeFiles/opengl.dir/src/main.cpp.o: CMakeFiles/opengl.dir/flags.make
-CMakeFiles/opengl.dir/src/main.cpp.o: /home/disruter/code/opengl/src/main.cpp
-CMakeFiles/opengl.dir/src/main.cpp.o: CMakeFiles/opengl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/disruter/code/opengl/out/build/GCC 13.3.0 x86_64-linux-gnu/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opengl.dir/src/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opengl.dir/src/main.cpp.o -MF CMakeFiles/opengl.dir/src/main.cpp.o.d -o CMakeFiles/opengl.dir/src/main.cpp.o -c /home/disruter/code/opengl/src/main.cpp
+CMakeFiles/opengl.dir/src/two.cpp.o: CMakeFiles/opengl.dir/flags.make
+CMakeFiles/opengl.dir/src/two.cpp.o: /home/disruter/code/opengl/src/two.cpp
+CMakeFiles/opengl.dir/src/two.cpp.o: CMakeFiles/opengl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/disruter/code/opengl/out/build/GCC 13.3.0 x86_64-linux-gnu/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opengl.dir/src/two.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opengl.dir/src/two.cpp.o -MF CMakeFiles/opengl.dir/src/two.cpp.o.d -o CMakeFiles/opengl.dir/src/two.cpp.o -c /home/disruter/code/opengl/src/two.cpp
 
-CMakeFiles/opengl.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opengl.dir/src/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/disruter/code/opengl/src/main.cpp > CMakeFiles/opengl.dir/src/main.cpp.i
+CMakeFiles/opengl.dir/src/two.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opengl.dir/src/two.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/disruter/code/opengl/src/two.cpp > CMakeFiles/opengl.dir/src/two.cpp.i
 
-CMakeFiles/opengl.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/src/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/disruter/code/opengl/src/main.cpp -o CMakeFiles/opengl.dir/src/main.cpp.s
+CMakeFiles/opengl.dir/src/two.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/src/two.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/disruter/code/opengl/src/two.cpp -o CMakeFiles/opengl.dir/src/two.cpp.s
 
 CMakeFiles/opengl.dir/src/glad.c.o: CMakeFiles/opengl.dir/flags.make
 CMakeFiles/opengl.dir/src/glad.c.o: /home/disruter/code/opengl/src/glad.c
@@ -102,13 +102,13 @@ CMakeFiles/opengl.dir/src/glad.c.s: cmake_force
 
 # Object files for target opengl
 opengl_OBJECTS = \
-"CMakeFiles/opengl.dir/src/main.cpp.o" \
+"CMakeFiles/opengl.dir/src/two.cpp.o" \
 "CMakeFiles/opengl.dir/src/glad.c.o"
 
 # External object files for target opengl
 opengl_EXTERNAL_OBJECTS =
 
-opengl: CMakeFiles/opengl.dir/src/main.cpp.o
+opengl: CMakeFiles/opengl.dir/src/two.cpp.o
 opengl: CMakeFiles/opengl.dir/src/glad.c.o
 opengl: CMakeFiles/opengl.dir/build.make
 opengl: CMakeFiles/opengl.dir/compiler_depend.ts

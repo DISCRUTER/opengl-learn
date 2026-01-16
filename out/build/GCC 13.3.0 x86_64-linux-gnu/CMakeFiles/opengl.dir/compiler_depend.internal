@@ -71,8 +71,8 @@ CMakeFiles/opengl.dir/src/glad.c.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
-CMakeFiles/opengl.dir/src/main.cpp.o
- /home/disruter/code/opengl/src/main.cpp
+CMakeFiles/opengl.dir/src/two.cpp.o
+ /home/disruter/code/opengl/src/two.cpp
  /home/disruter/code/opengl/include/KHR/khrplatform.h
  /home/disruter/code/opengl/include/glad/glad.h
  /usr/include/GLFW/glfw3.h
@@ -291,5 +291,5 @@ opengl
  /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so
  /usr/lib/x86_64-linux-gnu/libc_nonshared.a
  /home/disruter/code/opengl/out/build/GCC 13.3.0 x86_64-linux-gnu/CMakeFiles/opengl.dir/src/glad.c.o
- /home/disruter/code/opengl/out/build/GCC 13.3.0 x86_64-linux-gnu/CMakeFiles/opengl.dir/src/main.cpp.o
+ /home/disruter/code/opengl/out/build/GCC 13.3.0 x86_64-linux-gnu/CMakeFiles/opengl.dir/src/two.cpp.o
 

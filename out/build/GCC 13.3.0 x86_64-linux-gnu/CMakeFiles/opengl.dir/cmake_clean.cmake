@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/opengl.dir/link.d"
   "CMakeFiles/opengl.dir/src/glad.c.o"
   "CMakeFiles/opengl.dir/src/glad.c.o.d"
-  "CMakeFiles/opengl.dir/src/main.cpp.o"
-  "CMakeFiles/opengl.dir/src/main.cpp.o.d"
+  "CMakeFiles/opengl.dir/src/two.cpp.o"
+  "CMakeFiles/opengl.dir/src/two.cpp.o.d"
   "opengl"
   "opengl.pdb"
 )
