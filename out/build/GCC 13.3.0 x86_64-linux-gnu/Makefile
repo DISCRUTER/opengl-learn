@@ -153,29 +153,29 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
-src/two.o: src/two.cpp.o
-.PHONY : src/two.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-src/two.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/two.cpp.o
-.PHONY : src/two.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-src/two.i: src/two.cpp.i
-.PHONY : src/two.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-src/two.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/two.cpp.i
-.PHONY : src/two.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/two.s: src/two.cpp.s
-.PHONY : src/two.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-src/two.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/two.cpp.s
-.PHONY : src/two.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
-	@echo "... src/two.o"
-	@echo "... src/two.i"
-	@echo "... src/two.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

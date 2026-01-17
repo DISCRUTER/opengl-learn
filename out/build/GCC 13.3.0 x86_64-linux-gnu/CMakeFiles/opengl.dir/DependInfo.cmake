@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/disruter/code/opengl/src/glad.c" "CMakeFiles/opengl.dir/src/glad.c.o" "gcc" "CMakeFiles/opengl.dir/src/glad.c.o.d"
-  "/home/disruter/code/opengl/src/two.cpp" "CMakeFiles/opengl.dir/src/two.cpp.o" "gcc" "CMakeFiles/opengl.dir/src/two.cpp.o.d"
+  "/home/disruter/code/opengl/src/main.cpp" "CMakeFiles/opengl.dir/src/main.cpp.o" "gcc" "CMakeFiles/opengl.dir/src/main.cpp.o.d"
   "" "opengl" "gcc" "CMakeFiles/opengl.dir/link.d"
   )
 

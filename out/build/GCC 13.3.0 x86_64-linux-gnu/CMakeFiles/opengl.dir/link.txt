@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/opengl.dir/link.d CMakeFiles/opengl.dir/src/two.cpp.o CMakeFiles/opengl.dir/src/glad.c.o -o opengl  -lglfw
+/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/opengl.dir/link.d CMakeFiles/opengl.dir/src/main.cpp.o CMakeFiles/opengl.dir/src/glad.c.o -o opengl  -lglfw

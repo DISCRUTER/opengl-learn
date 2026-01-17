@@ -2,7 +2,7 @@ opengl: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
-  CMakeFiles/opengl.dir/src/two.cpp.o \
+  CMakeFiles/opengl.dir/src/main.cpp.o \
   CMakeFiles/opengl.dir/src/glad.c.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libglfw.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
@@ -47,7 +47,7 @@ opengl: \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o:
 
-CMakeFiles/opengl.dir/src/two.cpp.o:
+CMakeFiles/opengl.dir/src/main.cpp.o:
 
 CMakeFiles/opengl.dir/src/glad.c.o:
 
