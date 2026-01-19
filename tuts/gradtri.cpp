@@ -1,9 +1,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <Shader/shader.h>
-#include <ImageLoader/stb_image.h>
-
 #include <iostream>
 #include <cmath>
 
@@ -16,9 +13,10 @@ const unsigned int SCR_HEIGHT = 600;
 const char *vertexShaderSource = "#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"
     "layout (location = 1) in vec3 aColor;\n"
+    "uniform float offset;\n"
     "out vec3 vertexColor;\n"
     "void main() {\n"
-    "    gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+    "    gl_Position = vec4(aPos.x+offset, -aPos.y, aPos.z, 1.0);\n"
     "    vertexColor = aColor;\n"
     "}\0";
 const char *fragmentShaderSource = "#version 330 core\n"
@@ -50,16 +48,10 @@ int main() {
 
     float vertices[] = {
         // positions         // colors
+         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // bottom right
         -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // bottom left
-        0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f,    // top 
-        0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f     // bottom right
-    };
-
-    float texCoords[] = {
-        0.0f, 0.0f,   // bottom left
-        0.5f, 1.0f,   // top
-        1.0f, 0.0f    // bottom right
-    };
+         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // top 
+    }; 
 
     // Setup vertex array object (VAO) & vertex buffer object (VBO)
     unsigned int VAO, VBO;
@@ -109,10 +101,6 @@ int main() {
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
-    
-    // Deleting used shaders
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
 
     // Check for linking errors
     glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
@@ -120,30 +108,6 @@ int main() {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infolog);
         std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infolog << std::endl;
     }
-
-    // Loading textures
-    
-    // Generating texture object
-    unsigned int texture;
-    glGenTextures(1, &texture);
-    glBindTexture(GL_TEXTURE_2D, texture);
-    // setting the filtering and wrapping options
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    // loading the texture data
-    int width, height, nrChannels;
-    unsigned char* data = stbi_load("container.jpg", &width, &height, &nrChannels, 0);
-    if (data) {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-    } else {
-        std::cout << "Failed to load texture" << std::endl;
-    }
-    stbi_image_free(data);
-
-
 
     while (!glfwWindowShouldClose(window)) {
         // input
@@ -156,6 +120,10 @@ int main() {
         // activate the shader program
         glUseProgram(shaderProgram);
 
+        unsigned int offsetLocation;
+        offsetLocation = glGetUniformLocation(shaderProgram, "offset");
+        glUniform1f(offsetLocation, 0.3f);
+
         // rendering the triangle
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -165,6 +133,10 @@ int main() {
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+
+    // Deleting used shaders
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
  
     glfwTerminate();
     return 0;
