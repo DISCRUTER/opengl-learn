@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/disruter/code/opengl/src/glad.c" "CMakeFiles/opengl.dir/src/glad.c.o" "gcc" "CMakeFiles/opengl.dir/src/glad.c.o.d"
   "/home/disruter/code/opengl/src/main.cpp" "CMakeFiles/opengl.dir/src/main.cpp.o" "gcc" "CMakeFiles/opengl.dir/src/main.cpp.o.d"
+  "/home/disruter/code/opengl/src/stb_image.cpp" "CMakeFiles/opengl.dir/src/stb_image.cpp.o" "gcc" "CMakeFiles/opengl.dir/src/stb_image.cpp.o.d"
   "" "opengl" "gcc" "CMakeFiles/opengl.dir/link.d"
   )
 
