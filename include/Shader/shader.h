@@ -2,6 +2,7 @@
 #define SHADER_H
 
 #include <glad/glad.h>
+#include <glm/glm.hpp>
 
 #include <string>
 #include <fstream>
@@ -39,7 +40,8 @@ class Shader {
             vertexCode = vShaderStream.str();
             fragmentCode = fShaderStream.str();
         } catch (std::ifstream::failure& e) {
-            std::cout << "ERROR::SHADER::FILE_NOT_SUCCESSFULLY_READ" << std::endl;
+            std::cout << "ERROR::SHADER::FILE_NOT_SUCCESSFULLY_READ: " << e.what() << std::endl;
+            std::cout << "Paths: " << vertexPath << " / " << fragmentPath << std::endl;
         }
         const char* vShaderCode = vertexCode.c_str();
         const char* fShaderCode = fragmentCode.c_str();
@@ -82,6 +84,17 @@ class Shader {
     // ----------------------------------------------------
     void SetFloat(const std::string &name, float value) {
         glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
+    }
+    // ----------------------------------------------------
+    void SetVec2(const std::string &name, const glm::vec2 &value) const {
+        glUniform2fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
+    }
+    void SetVec2(const std::string &name, float x, float y) const {
+        glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y);
+    }
+    // ----------------------------------------------------
+    void SetMat4(const std::string &name, const glm::mat4 &value) const {
+        glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &value[0][0]);
     }
 
     private:
